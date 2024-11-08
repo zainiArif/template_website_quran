@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- import font Scheherazade -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="app_verses.js"></script>
+
+    <title>Ayat Quran dengan Terjemahan perkata</title>
+</head>
+
+<body>
+    <!-- for switch line dan tootlip -->
+    <h3 style="margin-bottom: 5px;">Pilih tampilan terjemahan perkata :</h3>
+    <div class="switch-container">
+        <label class="switch">
+            <input type="checkbox" id="mySwitch">
+            <span class="slider"></span>
+        </label>
+        <span class="label-text" id="switchStatus">Muncul tooltip</span>
+    </div>
+
+    <div id="surah-container">
+        <div id="popup" class="popup"></div>
+        <h2 id="surah-name">سُورَة الْفَاتِحَة</h2>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

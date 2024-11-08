@@ -1,0 +1,129 @@
+/* import file font OTF or TTF */
+@font-face{
+    font-family: "KFGQPC Uthmanic";
+    src: url("KFGQPC-UthmanicScript-HAFS-Regular.otf") format("opentype"); /* Format OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "LPMQ IsepMisbah";
+    src: url("LPMQ-IsepMisbah.ttf") format("truetype"); /* Format TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* untuk switch line dan tootlip */
+.switch-container {
+    background-color: white;
+    position: sticky;
+    top: 0; 
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #02d476;
+    transition: .4s;
+    border-radius: 30px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+/* Checked */
+input:checked+.slider {
+    background-color: #2196F3;
+}
+/* Move the slider when checked */
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+/* Label for text */
+.label-text {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#surah-container {
+    background-color: #f5f5f5;
+    width: 70%;
+    margin: auto;
+    padding: 0 20px 10px 20px;
+}
+.arabic-translation {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+.word-container {
+    margin: 0 0 3px 3px;
+    border-radius: 7px;
+}
+#surah-name {
+    text-align: center;
+    font-family: "LPMQ IsepMisbah", "Scheherazade New", "Amiri", serif;
+    font-size: 45px;
+}
+.arabic-word, .span-copy0 {
+    /* direction: rtl; */
+    font-size: 35px;
+    font-family: "LPMQ IsepMisbah", "Scheherazade New", "Amiri", serif;
+    text-align: center;
+}
+.arabic-number{
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 40px;
+    font-family: "KFGQPC Uthmanic", "LPMQ IsepMisbah", "Scheherazade New", "Amiri", serif;
+    text-align: center;
+}
+.translation-word, .translate-number, .span-copy1 {
+    text-align: center;
+    font-size: 14px;
+}
+.translation-container{
+    font-size: 18px;
+    margin-top: 3px;
+}
+.verse-container{
+    margin-bottom: 30px;
+}
+
+/* Kelompok popup */
+.popup {
+  position: absolute;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  display: none;
+  z-index: 10;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.word-container:hover{
+    cursor: pointer;
+    color: blue;
+}
